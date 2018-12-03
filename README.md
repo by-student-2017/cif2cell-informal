@@ -4,6 +4,9 @@ cif2cell-informal
 version: comments
 
 
+1.2.14: modified input file for abinit and elk.  add run option (scf, dos, band, etc.)
+
+
 1.2.13: support Akai-KKR option (test version)
 
 
