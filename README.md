@@ -4,6 +4,9 @@ cif2cell-informal
 version: comments
 
 
+1.2.15: potential file option for Elk, Abinit(ONCVPSP, GBRV, JTH), PWscf(GBRV, PSLibrary-0.3.1)
+
+
 1.2.14: modified input file for abinit and elk.  add run option (scf, dos, band, etc.)
 
 
