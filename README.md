@@ -1,10 +1,11 @@
 ### cif2cell-informal
 
 
-	This cif2cell support cif file (from VESTA version 3.1.0 - 3.1.7 in 2013-2014 year. you can get VESTA old version from this URL: http://jp-minerals.org/vesta/archives/)
+	Now, this cif2cell support cif file (from VESTA version 3.1.0 - 3.1.7 in 2013-2014 year. you can get VESTA old version from this URL: http://jp-minerals.org/vesta/archives/)
+	Or, expert user recommend to change _symmetry_ part on cif file.
 
 
-### compile
+### Compiling
 
 
 	tar zxvf cif2cell-code-1.2.1X
