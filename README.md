@@ -27,6 +27,11 @@
 ### Version: comments
 
 
+1.2.18: bug fix making k-point setting.  Add vasp option (run type setting) (test version).
+	Set total energy convergence to 1 meV/atom for Elk, Abinit, PWscf, OpenMX and VASP.
+	(change part: ESPInterfaces.py)
+
+
 1.2.17: support OpenMX (test version), bug fix Abinit part. (test version) 
 	(change part: cif2cell, ESPInterfaces.py, utils.py, elementdata.py)
 
