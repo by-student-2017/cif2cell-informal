@@ -25,6 +25,17 @@ cif2cell-informal
 ## Usage (examples)
 
 
+*	VASP
+
+
+	cif2cell -p vasp --vasp-format=5 --vasp-encutfac=1.0 --vasp-pseudo-libdr="/home/username/vasp.5.4.1/potpaw_PBE" --vasp-cartesian-lattice-vectors --setup-all  -f *.cif
+
+
+	export VASP_PAWLIB = $HOME/vasp.5.4.1/potpaw_PBE
+
+
+
+
 *	Abinit
 
 
@@ -33,6 +44,8 @@ cif2cell-informal
 
 
 	export ABINIT_PAWLIB = $HOME/JTH
+
+
 
 
 *	PWscf
@@ -44,10 +57,14 @@ cif2cell-informal
 	export PWscf_PAWLIB = $HOME/PSLibrary
 
 
+
+
 *	Elk
 
 
 	cif2cell -p elk --setup-all -f *.cif
+
+
 
 
 *	Akai-KKR
@@ -56,10 +73,14 @@ cif2cell-informal
 	cif2cell -p akaikkr --setup-all -f *.cif
 
 
+
+
 *	OpenMX
 
 
 	cif2cell -p openmx --openmx-seudo-libdr=/home/username/openmx3.8/DFT_DATA13/PAO --setup-all -f *.cif
+
+
 
 
 ## Version: comments
