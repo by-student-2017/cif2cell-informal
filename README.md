@@ -27,6 +27,9 @@
 ### Version: comments
 
 
+1.2.19: automatically set energy cutoff from pseudo-potential to Abinit and PWscf input files.
+
+
 1.2.18: bug fix making k-point setting.  Add vasp option (run type setting) (test version).
 	Set total energy convergence to 1 meV/atom for Elk, Abinit, PWscf, OpenMX and VASP.
 	(change part: ESPInterfaces.py)
