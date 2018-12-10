@@ -8,7 +8,10 @@ cif2cell-informal
 ## Compiling
 
 
-*	tar zxvf cif2cell-code-1.2.1X
+*	tar zxvf cif2cell-code-1.2.19+PyCifRW-4.4.tar.gz
+
+
+*	cd cif2cell-code-1.2.19+PyCifRW-4.4
 
 
 *	sudo python setup.py install
