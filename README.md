@@ -1,8 +1,8 @@
 ### cif2cell-informal
 
 
-	Now, this cif2cell support cif file (from VESTA version 3.1.0 - 3.1.7 in 2013-2014 year. you can get VESTA old version from this URL: http://jp-minerals.org/vesta/archives/)
-	Or, expert user recommend to change _symmetry_ part on cif file.
+	Now, this cif2cell support cif file (from VESTA version 3.1.0 - 3.1.7 in 2013-2014. you can get VESTA old version from this URL: http://jp-minerals.org/vesta/archives/)
+	Or, expert user recommend to change "_symmetry_" part on cif file. new version cif remove "_symmetry_" and add "alt."
 
 
 ### Compiling
@@ -25,6 +25,10 @@
 
 
 ### Version: comments
+
+
+1.2.19+PyCifRW-4.4: replace PycifRW-3.3 to PyCifRW-4.4.
+	could use new verion cif (e.g. new version vesta in 2018-2019)
 
 
 1.2.19: automatically set energy cutoff from pseudo-potential to Abinit and PWscf input files.
