@@ -26,24 +26,39 @@ cif2cell-informal
 
 
 *	Abinit
+
+
 	cif2cell -p abinit --abinit-pseudo-JTH-libdr='/home/username/JTH' --setup-all -f *.cif
+
+
+
 	export ABINIT_PAWLIB = $HOME/JTH
 
 
 *	PWscf
+
+
 	cif2cell -p pwscf --pwscf-pseudo-PSLibrary-libdr='/home/username/PSLibrary" --setup-all -f *.cif
+
+
 	export PWscf_PAWLIB = $HOME/PSLibrary
 
 
 *	Elk
+
+
 	cif2cell -p elk --setup-all -f *.cif
 
 
 *	Akai-KKR
+
+
 	cif2cell -p akaikkr --setup-all -f *.cif
 
 
 *	OpenMX
+
+
 	cif2cell -p openmx --openmx-seudo-libdr=/home/username/openmx3.8/DFT_DATA13/PAO --setup-all -f *.cif
 
 
