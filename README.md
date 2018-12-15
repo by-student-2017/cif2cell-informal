@@ -89,6 +89,10 @@ cif2cell-informal
 ## Version: comments
 
 
+* 1.2.20+PyCifRW-4.4: bug fix. reading pslibrary (H atom) for pwscf.
+	could use new verion cif (e.g. new version vesta in 2018-2019)
+
+
 * 1.2.19+PyCifRW-4.4: replace PycifRW-3.3 to PyCifRW-4.4.
 	could use new verion cif (e.g. new version vesta in 2018-2019)
 
