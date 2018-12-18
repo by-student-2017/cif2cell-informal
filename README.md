@@ -8,10 +8,10 @@ cif2cell-informal
 ## Compiling
 
 
-*	tar zxvf cif2cell-code-1.2.21+PyCifRW-4.4.tar.gz
+*	tar zxvf cif2cell-code-1.2.22+PyCifRW-4.4.tar.gz
 
 
-*	cd cif2cell-code-1.2.21+PyCifRW-4.4
+*	cd cif2cell-code-1.2.22+PyCifRW-4.4
 
 
 *	sudo python setup.py install
@@ -87,6 +87,11 @@ cif2cell-informal
 
 
 ## Version: comments
+
+
+* 1.2.22+PyCifRW-4.4: show calculation command. make automatically bands.in and bands.plot file for PWscf.
+	Please, input ef value from picene.scf.out file (fermi energy). [the Fermi energy is     1.8460 ev] on picene.scf.out.
+	could use new verion cif (e.g. new version vesta in 2018-2019)
 
 
 * 1.2.21+PyCifRW-4.4: add run-type option for pwscf.
