@@ -89,6 +89,10 @@ cif2cell-informal
 ## Version: comments
 
 
+* 1.2.25+PyCifRW-4.4: add --run-calc option. 
+	could use new verion cif (e.g. new version vesta in 2018-2019)
+
+
 * 1.2.24+PyCifRW-4.4: add ibrav option for PWscf. get number of cup (cif2cell.py)
 	could use new verion cif (e.g. new version vesta in 2018-2019)
 
