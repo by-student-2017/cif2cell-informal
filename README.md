@@ -8,10 +8,10 @@ cif2cell-informal
 ## Compiling
 
 
-*	tar zxvf cif2cell-code-1.2.24+PyCifRW-4.4.tar.gz
+*	tar zxvf cif2cell-code-1.2.25+PyCifRW-4.4.tar.gz
 
 
-*	cd cif2cell-code-1.2.24+PyCifRW-4.4
+*	cd cif2cell-code-1.2.25+PyCifRW-4.4
 
 
 *	sudo python setup.py install
@@ -84,6 +84,16 @@ cif2cell-informal
 	cif2cell -p openmx --openmx-seudo-libdr=/home/username/openmx3.8/DFT_DATA13/PAO --setup-all -f *.cif
 
 
+## Usage (Expert mode)
+
+
+*	PWscf
+
+
+	cif2cell -p pwscf --pwscf-pseudo-PSLibrary-libdr='/home/username/PSLibrary" --pwscf-bin-dir=$HOME/q-e-qe-6.3/bin --setup-all --k-resolution=0.4 --pwscf-brav --pwscf-spin=no --run-cal --pwscf-run-type=scf -f *.cif
+
+
+	export PWscf_PAWLIB = $HOME/PSLibrary
 
 
 ## Version: comments
