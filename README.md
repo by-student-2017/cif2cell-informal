@@ -8,10 +8,10 @@ cif2cell-informal
 ## Compiling
 
 
-*	tar zxvf cif2cell-code-1.2.25+PyCifRW-4.4.tar.gz
+*	tar zxvf cif2cell-code-1.2.26+PyCifRW-4.4.tar.gz
 
 
-*	cd cif2cell-code-1.2.25+PyCifRW-4.4
+*	cd cif2cell-code-1.2.26+PyCifRW-4.4
 
 
 *	sudo python setup.py install
@@ -97,6 +97,10 @@ cif2cell-informal
 
 
 ## Version: comments
+
+
+* 1.2.26+PyCifRW-4.4: refine k-point setting for band dispersion on PWscf. (under construction)
+	could use new verion cif (e.g. new version vesta in 2018-2019)
 
 
 * 1.2.25+PyCifRW-4.4: add --run-calc option. 
