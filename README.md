@@ -107,7 +107,7 @@ cif2cell-informal
 ## Version: comments
 
 
-* 1.2.28+PyCifRW-4.4: add cif2cell-lammps code
+* 1.2.29+PyCifRW-4.4: add cif2cell-lammps code
 	could use new verion cif (e.g. new version vesta in 2018-2019)
 
 
