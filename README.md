@@ -107,10 +107,10 @@ cif2cell-informal
 *	PWscf (PWcond)
 
 
-	cif2cell -p pwscf --pwscf-pseudo-PSLibrary-libdr='/home/username/PSLibrary" --pwscf-bin-dir=$HOME/q-e-qe-6.3/bin --setup-all --k-resolution=0.4 --pwscf-run-type=lead --run-calc --pwscf-run-type=scf -f *.cif
+	cif2cell -p pwscf --pwscf-pseudo-PSLibrary-libdr='/home/username/PSLibrary" --pwscf-bin-dir=$HOME/q-e-qe-6.3/bin --setup-all --k-resolution=0.4 --pwscf-run-type=lead --run-calc -f *.cif
 
 
-	cif2cell -p pwscf --pwscf-pseudo-PSLibrary-libdr='/home/username/PSLibrary" --pwscf-bin-dir=$HOME/q-e-qe-6.3/bin --setup-all --k-resolution=0.4 --pwscf-run-type=scat --run-calc --pwscf-run-type=scf -f *.cif
+	cif2cell -p pwscf --pwscf-pseudo-PSLibrary-libdr='/home/username/PSLibrary" --pwscf-bin-dir=$HOME/q-e-qe-6.3/bin --setup-all --k-resolution=0.4 --pwscf-run-type=scat --run-calc -f *.cif
 
 
 ## Version: comments
