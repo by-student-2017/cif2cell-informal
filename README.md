@@ -8,10 +8,10 @@ cif2cell-informal
 ## Compiling
 
 
-*	tar zxvf cif2cell-code-1.2.32+PyCifRW-4.4.tar.gz
+*	tar zxvf cif2cell-code-1.2.33+PyCifRW-4.4.tar.gz
 
 
-*	cd cif2cell-code-1.2.32+PyCifRW-4.4
+*	cd cif2cell-code-1.2.33+PyCifRW-4.4
 
 
 *	sudo python setup.py install
@@ -141,6 +141,10 @@ cif2cell-informal
 
 
 ## Version: comments
+
+
+* 1.2.33+PyCifRW-4.4: add --pwscf-k-point-even=yes option (default: yes) for PWscf.
+	could use new verion cif (e.g. new version vesta in 2018-2019)
 
 
 * 1.2.32+PyCifRW-4.4: add NEB option for PWscf.
