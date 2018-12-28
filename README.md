@@ -8,10 +8,10 @@ cif2cell-informal
 ## Compiling
 
 
-*	tar zxvf cif2cell-code-1.2.31+PyCifRW-4.4.tar.gz
+*	tar zxvf cif2cell-code-1.2.32+PyCifRW-4.4.tar.gz
 
 
-*	cd cif2cell-code-1.2.31+PyCifRW-4.4
+*	cd cif2cell-code-1.2.32+PyCifRW-4.4
 
 
 *	sudo python setup.py install
@@ -131,7 +131,20 @@ cif2cell-informal
 	cif2cell -p pwscf --pwscf-pseudo-PSLibrary-libdr='/home/username/PSLibrary" --pwscf-bin-dir=$HOME/q-e-qe-6.3/bin --setup-all --k-resolution=0.4 --pwscf-run-type=scat --run-calc -f *.cif
 
 
+*	PWscf (NEB)
+
+
+	cif2cell -p pwscf  --pwscf-pseudo-PSLibrary-libdr='/home/student/psl/' --setup-all --k-resolution=0.4 --pwscf-bin-dir=$HOME/q-e-qe-*/bin --pwscf-run-type=neb-start --pwscf-neb-ems=bc2 --pwscf-neb-mu=0.0 --pwscf-neb-bias-voltage=0.5 -f start-structure.cif
+
+
+	cif2cell -p pwscf  --pwscf-pseudo-PSLibrary-libdr='/home/' --setup-al --pwscf-run-type=neb-end --pwscf-neb-ems=bc2 --pwscf-neb-mu=0.0 --pwscf-neb-bias-voltage=0.5 --run-calc -f end-structure.cif
+
+
 ## Version: comments
+
+
+* 1.2.32+PyCifRW-4.4: add NEB option for PWscf.
+	could use new verion cif (e.g. new version vesta in 2018-2019)
 
 
 * 1.2.31+PyCifRW-4.4: add tddft and eels option for PWscf.
