@@ -8,10 +8,10 @@ cif2cell-informal
 ## Compiling
 
 
-*	tar zxvf cif2cell-code-1.2.30+PyCifRW-4.4.tar.gz
+*	tar zxvf cif2cell-code-1.2.31+PyCifRW-4.4.tar.gz
 
 
-*	cd cif2cell-code-1.2.30+PyCifRW-4.4
+*	cd cif2cell-code-1.2.31+PyCifRW-4.4
 
 
 *	sudo python setup.py install
@@ -104,6 +104,24 @@ cif2cell-informal
 	export PWscf_PAWLIB = $HOME/PSLibrary
 
 
+*	PWscf (TDDFT)
+
+
+	cif2cell -p pwscf --pwscf-pseudo-PSLibrary-libdr='/home/username/PSLibrary" --pwscf-bin-dir=$HOME/q-e-qe-6.3/bin --setup-all --k-resolution=0.4 --pwscf-run-type=tddft --pwscf-spin=no --run-calc -f *.cif
+
+
+	if you can calculate it with gamma point for B3LYP or HSE, set large value to --k-resolution, e.g. --k-resolution=10
+
+
+*	PWscf (EELS)
+
+
+	cif2cell -p pwscf --pwscf-pseudo-PSLibrary-libdr='/home/username/PSLibrary" --pwscf-bin-dir=$HOME/q-e-qe-6.3/bin --setup-all --k-resolution=0.4 --pwscf-run-type=eels --pwscf-spin=no --run-calc -f *.cif
+
+
+	if you can calculate it with gamma point for B3LYP or HSE, set large value to --k-resolution, e.g. --k-resolution=10
+
+
 *	PWscf (PWcond)
 
 
@@ -114,6 +132,10 @@ cif2cell-informal
 
 
 ## Version: comments
+
+
+* 1.2.31+PyCifRW-4.4: add tddft and eels option for PWscf.
+	could use new verion cif (e.g. new version vesta in 2018-2019)
 
 
 * 1.2.30+PyCifRW-4.4: add pwcond-lead and pwcond-scat option for PWscf (PWcond calulation).
