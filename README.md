@@ -113,7 +113,7 @@ cif2cell-informal
 	cif2cell -p pwscf --pwscf-pseudo-PSLibrary-libdr='/home/username/PSLibrary" --pwscf-bin-dir=$HOME/q-e-qe-6.3/bin --setup-all --k-resolution=0.48 --pwscf-run-type=tddft --pwscf-spin=no --run-calc -f *.cif
 
 
-	if you can calculate it with gamma point for B3LYP or HSE, set large value to --k-resolution, e.g. --k-resolution=10
+	If you would calculate it with gamma point only for B3LYP or HSE, set large value to --k-resolution, e.g. --k-resolution=10 for molecule.
 
 
 *	PWscf (EELS)
@@ -122,7 +122,7 @@ cif2cell-informal
 	cif2cell -p pwscf --pwscf-pseudo-PSLibrary-libdr='/home/username/PSLibrary" --pwscf-bin-dir=$HOME/q-e-qe-6.3/bin --setup-all --k-resolution=0.48 --pwscf-run-type=eels --pwscf-spin=no --run-calc -f *.cif
 
 
-	if you can calculate it with gamma point for B3LYP or HSE, set large value to --k-resolution, e.g. --k-resolution=10
+	If you would calculate it with gamma point only for B3LYP or HSE, set large value to --k-resolution, e.g. --k-resolution=10 for molecule.
 
 
 *	PWscf (PWcond)
