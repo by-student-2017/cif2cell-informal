@@ -137,7 +137,7 @@ cif2cell-informal
 *	PWscf (NEB)
 
 
-	cif2cell -p pwscf  --pwscf-pseudo-PSLibrary-libdr='/home/student/psl/' --setup-all --k-resolution=0.48 --pwscf-bin-dir=$HOME/q-e-qe-*/bin --pwscf-run-type=neb-start --pwscf-neb-ems=bc2 --pwscf-neb-mu=0.0 --pwscf-neb-bias-voltage=0.5 -f start-structure.cif
+	cif2cell -p pwscf  --pwscf-pseudo-PSLibrary-libdr='/home/username/PSLibrary' --setup-all --k-resolution=0.48 --pwscf-bin-dir=$HOME/q-e-qe-*/bin --pwscf-run-type=neb-start --pwscf-neb-ems=bc2 --pwscf-neb-mu=0.0 --pwscf-neb-bias-voltage=0.5 -f start-structure.cif
 
 
 	cif2cell -p pwscf  --pwscf-pseudo-PSLibrary-libdr='/home/' --setup-al --pwscf-run-type=neb-end --pwscf-neb-ems=bc2 --pwscf-neb-mu=0.0 --pwscf-neb-bias-voltage=0.5 --run-calc -f end-structure.cif
