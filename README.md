@@ -98,16 +98,19 @@ cif2cell-informal
 *	PWscf
 
 
-	cif2cell -p pwscf --pwscf-pseudo-PSLibrary-libdr='/home/username/PSLibrary" --pwscf-bin-dir=$HOME/q-e-qe-6.3/bin --setup-all --k-resolution=0.4 --pwscf-brav --pwscf-spin=no --run-calc --pwscf-run-type=scf -f *.cif
+	cif2cell -p pwscf --pwscf-pseudo-PSLibrary-libdr='/home/username/PSLibrary" --pwscf-bin-dir=$HOME/q-e-qe-6.3/bin --setup-all --k-resolution=0.48 --pwscf-brav --pwscf-spin=no --run-calc --pwscf-run-type=scf -f *.cif
 
 
 	export PWscf_PAWLIB = $HOME/PSLibrary
 
 
+	(number of k point * lattice constant = 10 - 13 Angstrom in SCF calculation.  This range is from --k-resolution=2*3.1415/13=0.48 to --k-resolution=2*3.1415/10=0.62.)  The default setting is --k-resolution=0.2. This setting is enough to calculate dos. hence, nk(DOS) = nk(SCF)*2. nk = number of k point.
+
+
 *	PWscf (TDDFT)
 
 
-	cif2cell -p pwscf --pwscf-pseudo-PSLibrary-libdr='/home/username/PSLibrary" --pwscf-bin-dir=$HOME/q-e-qe-6.3/bin --setup-all --k-resolution=0.4 --pwscf-run-type=tddft --pwscf-spin=no --run-calc -f *.cif
+	cif2cell -p pwscf --pwscf-pseudo-PSLibrary-libdr='/home/username/PSLibrary" --pwscf-bin-dir=$HOME/q-e-qe-6.3/bin --setup-all --k-resolution=0.48 --pwscf-run-type=tddft --pwscf-spin=no --run-calc -f *.cif
 
 
 	if you can calculate it with gamma point for B3LYP or HSE, set large value to --k-resolution, e.g. --k-resolution=10
@@ -116,7 +119,7 @@ cif2cell-informal
 *	PWscf (EELS)
 
 
-	cif2cell -p pwscf --pwscf-pseudo-PSLibrary-libdr='/home/username/PSLibrary" --pwscf-bin-dir=$HOME/q-e-qe-6.3/bin --setup-all --k-resolution=0.4 --pwscf-run-type=eels --pwscf-spin=no --run-calc -f *.cif
+	cif2cell -p pwscf --pwscf-pseudo-PSLibrary-libdr='/home/username/PSLibrary" --pwscf-bin-dir=$HOME/q-e-qe-6.3/bin --setup-all --k-resolution=0.48 --pwscf-run-type=eels --pwscf-spin=no --run-calc -f *.cif
 
 
 	if you can calculate it with gamma point for B3LYP or HSE, set large value to --k-resolution, e.g. --k-resolution=10
@@ -125,16 +128,16 @@ cif2cell-informal
 *	PWscf (PWcond)
 
 
-	cif2cell -p pwscf --pwscf-pseudo-PSLibrary-libdr='/home/username/PSLibrary" --pwscf-bin-dir=$HOME/q-e-qe-6.3/bin --setup-all --k-resolution=0.4 --pwscf-run-type=lead --run-calc -f *.cif
+	cif2cell -p pwscf --pwscf-pseudo-PSLibrary-libdr='/home/username/PSLibrary" --pwscf-bin-dir=$HOME/q-e-qe-6.3/bin --setup-all --k-resolution=0.48 --pwscf-run-type=lead --run-calc -f *.cif
 
 
-	cif2cell -p pwscf --pwscf-pseudo-PSLibrary-libdr='/home/username/PSLibrary" --pwscf-bin-dir=$HOME/q-e-qe-6.3/bin --setup-all --k-resolution=0.4 --pwscf-run-type=scat --run-calc -f *.cif
+	cif2cell -p pwscf --pwscf-pseudo-PSLibrary-libdr='/home/username/PSLibrary" --pwscf-bin-dir=$HOME/q-e-qe-6.3/bin --setup-all --k-resolution=0.48 --pwscf-run-type=scat --run-calc -f *.cif
 
 
 *	PWscf (NEB)
 
 
-	cif2cell -p pwscf  --pwscf-pseudo-PSLibrary-libdr='/home/student/psl/' --setup-all --k-resolution=0.4 --pwscf-bin-dir=$HOME/q-e-qe-*/bin --pwscf-run-type=neb-start --pwscf-neb-ems=bc2 --pwscf-neb-mu=0.0 --pwscf-neb-bias-voltage=0.5 -f start-structure.cif
+	cif2cell -p pwscf  --pwscf-pseudo-PSLibrary-libdr='/home/student/psl/' --setup-all --k-resolution=0.48 --pwscf-bin-dir=$HOME/q-e-qe-*/bin --pwscf-run-type=neb-start --pwscf-neb-ems=bc2 --pwscf-neb-mu=0.0 --pwscf-neb-bias-voltage=0.5 -f start-structure.cif
 
 
 	cif2cell -p pwscf  --pwscf-pseudo-PSLibrary-libdr='/home/' --setup-al --pwscf-run-type=neb-end --pwscf-neb-ems=bc2 --pwscf-neb-mu=0.0 --pwscf-neb-bias-voltage=0.5 --run-calc -f end-structure.cif
