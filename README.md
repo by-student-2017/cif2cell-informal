@@ -104,7 +104,7 @@ cif2cell-informal
 	export PWscf_PAWLIB = $HOME/PSLibrary
 
 
-	(number of k point * lattice constant = 10 - 13 Angstrom in SCF calculation.  This range is from --k-resolution=2*3.1415/13=0.48 to --k-resolution=2*3.1415/10=0.62.)  The default setting is --k-resolution=0.2. This setting is enough to calculate dos. hence, nk(DOS) = nk(SCF)*2. nk = number of k point.
+	Number of k point * lattice constant = 10 - 13 Angstrom in SCF calculation.  This range is from --k-resolution=2*3.1415/13=0.48 to --k-resolution=2*3.1415/10=0.62.  The default setting is --k-resolution=0.2. This setting is enough to calculate dos. Hence, nk(DOS) = nk(SCF)*2. nk = number of k point.  This code set automatically [--k-resolution value / 2] for dos calculation.
 
 
 *	PWscf (TDDFT)
