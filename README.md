@@ -8,10 +8,10 @@ cif2cell-informal
 ## Compiling
 
 
-*	tar zxvf cif2cell-code-1.2.36+PyCifRW-4.4.tar.gz
+*	tar zxvf cif2cell-code-1.2.37+PyCifRW-4.4.tar.gz
 
 
-*	cd cif2cell-code-1.2.36+PyCifRW-4.4
+*	cd cif2cell-code-1.2.37+PyCifRW-4.4
 
 
 *	sudo python setup.py install
@@ -143,7 +143,17 @@ cif2cell-informal
 	cif2cell -p pwscf  --pwscf-pseudo-PSLibrary-libdr='/home/' --setup-al --pwscf-run-type=neb-end --pwscf-neb-ems=bc2 --pwscf-neb-mu=0.0 --pwscf-neb-bias-voltage=0.5 --run-calc -f end-structure.cif
 
 
+*	Abinit (Phonon)
+
+
+	cif2cell -p abinit --abinit-pseudo-JTH-libdr='/home/student/jth' --setup-all --abinit-run-type=phonon --k-resolution=0.4 --abinit-q-resolution=0.8 -f *.cif
+
+
 ## Version: comments
+
+
+* 1.2.37+PyCifRW-4.4: modified phonon option and k mesh (dos) for Abinit.
+	could use new verion cif (e.g. new version vesta in 2018-2019)
 
 
 * 1.2.36+PyCifRW-4.4: add --abinit-run-type option for Phonon (trial version).
