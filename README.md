@@ -149,6 +149,10 @@ cif2cell-informal
 	cif2cell -p abinit --abinit-pseudo-JTH-libdr='/home/student/jth' --setup-all --abinit-run-type=phonon --k-resolution=0.4 --abinit-q-resolution=0.8 -f *.cif
 
 
+*	Akai-KKR (brvtyp mode)
+
+
+	cif2cell -p akaikkr --setup-all --akaikkr-brvtyp --akaikkr-collect-atoms --akaikkr-run-level=2 -f *.cif
 ## Version: comments
 
 
