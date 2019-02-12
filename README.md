@@ -17,8 +17,6 @@ cif2cell-informal
 *	sudo python setup.py install
 
 
-
-
 ## Usage (help)
 
 
@@ -34,21 +32,10 @@ cif2cell-informal
 	cif2cell -p vasp --vasp-format=5 --vasp-encutfac=1.0 --vasp-pseudo-libdr="/home/username/vasp.5.4.1/potpaw_PBE" --vasp-cartesian-lattice-vectors --setup-all  -f *.cif
 
 
-	export VASP_PAWLIB = $HOME/vasp.5.4.1/potpaw_PBE
-
-
-
-
 *	Abinit
 
 
 	cif2cell -p abinit --abinit-pseudo-JTH-libdr='/home/username/JTH' --setup-all -f *.cif
-
-
-
-	export ABINIT_PAWLIB = $HOME/JTH
-
-
 
 
 *	PWscf
@@ -57,17 +44,10 @@ cif2cell-informal
 	cif2cell -p pwscf --pwscf-pseudo-PSLibrary-libdr='/home/username/PSLibrary" --setup-all -f *.cif
 
 
-	export PWscf_PAWLIB = $HOME/PSLibrary
-
-
-
-
 *	Elk
 
 
 	cif2cell -p elk --setup-all -f *.cif
-
-
 
 
 *	Akai-KKR
@@ -76,14 +56,10 @@ cif2cell-informal
 	cif2cell -p akaikkr --setup-all -f *.cif
 
 
-
-
 *	OpenMX
 
 
 	cif2cell -p openmx --openmx-seudo-libdr=/home/username/openmx3.8/DFT_DATA13/PAO --setup-all -f *.cif
-
-
 
 
 *	Lammps
@@ -153,6 +129,43 @@ cif2cell-informal
 
 
 	cif2cell -p akaikkr --setup-all --akaikkr-brvtyp --akaikkr-collect-atoms --akaikkr-run-level=2 -f *.cif
+
+
+## Usage (examples, Expert mode)
+
+
+*	VASP
+
+
+	cif2cell -p vasp --vasp-format=5 --vasp-encutfac=1.0 --vasp-cartesian-lattice-vectors --setup-all  -f *.cif
+
+
+	export VASP_PAWLIB = $HOME/vasp.5.4.1/potpaw_PBE
+
+
+
+
+*	Abinit
+
+
+	cif2cell -p abinit --setup-all -f *.cif
+
+
+
+	export ABINIT_PAWLIB = $HOME/JTH
+
+
+
+
+*	PWscf
+
+
+	cif2cell -p pwscf --setup-all -f *.cif
+
+
+	export PWscf_PAWLIB = $HOME/PSLibrary
+
+
 ## Version: comments
 
 
