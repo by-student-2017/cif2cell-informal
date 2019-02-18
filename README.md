@@ -41,7 +41,7 @@ cif2cell-informal
 *	PWscf
 
 
-	cif2cell -p pwscf --pwscf-pseudo-PSLibrary-libdr='/home/username/PSLibrary" --setup-all -f *.cif
+	cif2cell -p pwscf --pwscf-pseudo-PSLibrary-libdr='/home/username/PSLibrary' --setup-all -f *.cif
 
 
 *	Elk
@@ -74,7 +74,7 @@ cif2cell-informal
 *	PWscf
 
 
-	cif2cell -p pwscf --pwscf-pseudo-PSLibrary-libdr='/home/username/PSLibrary" --pwscf-bin-dir=$HOME/q-e-qe-6.3/bin --setup-all --k-resolution=0.48 --pwscf-brav --pwscf-spin=no --run-calc --pwscf-run-type=scf -f *.cif
+	cif2cell -p pwscf --pwscf-pseudo-PSLibrary-libdr='/home/username/PSLibrary' --pwscf-bin-dir=$HOME/q-e-qe-6.3/bin --setup-all --k-resolution=0.48 --pwscf-brav --pwscf-spin=no --run-calc --pwscf-run-type=scf -f *.cif
 
 
 	export PWscf_PAWLIB = $HOME/PSLibrary
@@ -86,7 +86,7 @@ cif2cell-informal
 *	PWscf (TDDFT)
 
 
-	cif2cell -p pwscf --pwscf-pseudo-PSLibrary-libdr='/home/username/PSLibrary" --pwscf-bin-dir=$HOME/q-e-qe-6.3/bin --setup-all --k-resolution=0.48 --pwscf-run-type=tddft --pwscf-spin=no --run-calc -f *.cif
+	cif2cell -p pwscf --pwscf-pseudo-PSLibrary-libdr='/home/username/PSLibrary' --pwscf-bin-dir=$HOME/q-e-qe-6.3/bin --setup-all --k-resolution=0.48 --pwscf-run-type=tddft --pwscf-spin=no --run-calc -f *.cif
 
 
 	If you would calculate it with gamma point only for B3LYP or HSE, set large value to --k-resolution, e.g. --k-resolution=10 for molecule.
@@ -95,7 +95,7 @@ cif2cell-informal
 *	PWscf (EELS)
 
 
-	cif2cell -p pwscf --pwscf-pseudo-PSLibrary-libdr='/home/username/PSLibrary" --pwscf-bin-dir=$HOME/q-e-qe-6.3/bin --setup-all --k-resolution=0.48 --pwscf-run-type=eels --pwscf-spin=no --run-calc -f *.cif
+	cif2cell -p pwscf --pwscf-pseudo-PSLibrary-libdr='/home/username/PSLibrary' --pwscf-bin-dir=$HOME/q-e-qe-6.3/bin --setup-all --k-resolution=0.48 --pwscf-run-type=eels --pwscf-spin=no --run-calc -f *.cif
 
 
 	If you would calculate it with gamma point only for B3LYP or HSE, set large value to --k-resolution, e.g. --k-resolution=10 for molecule.
@@ -104,10 +104,10 @@ cif2cell-informal
 *	PWscf (PWcond)
 
 
-	cif2cell -p pwscf --pwscf-pseudo-PSLibrary-libdr='/home/username/PSLibrary" --pwscf-bin-dir=$HOME/q-e-qe-6.3/bin --setup-all --k-resolution=0.48 --pwscf-run-type=lead --run-calc -f *.cif
+	cif2cell -p pwscf --pwscf-pseudo-PSLibrary-libdr='/home/username/PSLibrary' --pwscf-bin-dir=$HOME/q-e-qe-6.3/bin --setup-all --k-resolution=0.48 --pwscf-run-type=lead --run-calc -f *.cif
 
 
-	cif2cell -p pwscf --pwscf-pseudo-PSLibrary-libdr='/home/username/PSLibrary" --pwscf-bin-dir=$HOME/q-e-qe-6.3/bin --setup-all --k-resolution=0.48 --pwscf-run-type=scat --run-calc -f *.cif
+	cif2cell -p pwscf --pwscf-pseudo-PSLibrary-libdr='/home/username/PSLibrary' --pwscf-bin-dir=$HOME/q-e-qe-6.3/bin --setup-all --k-resolution=0.48 --pwscf-run-type=scat --run-calc -f *.cif
 
 
 *	PWscf (NEB)
