@@ -119,6 +119,18 @@ cif2cell-informal
 	cif2cell -p pwscf  --pwscf-pseudo-PSLibrary-libdr='/home/' --setup-al --pwscf-run-type=neb-end --pwscf-neb-ems=bc2 --pwscf-neb-mu=0.0 --pwscf-neb-bias-voltage=0.5 --run-calc -f end-structure.cif
 
 
+*	PWscf (relax for interface)
+
+
+	cif2cell -p pwscf --pwscf-pseudo-PSLibrary-libdr='/home/student/psl' --pwscf-bin-dir=$HOME/q-e-qe-6.3/bin --setup-all --k-resolution=0.40 --pwscf-run-type=opt --pwscf-fix-all-pos -f *.cif
+
+
+	cif2cell -p pwscf --pwscf-pseudo-PSLibrary-libdr='/home/student/psl' --pwscf-bin-dir=$HOME/q-e-qe-6.3/bin --setup-all --k-resolution=0.40 --pwscf-run-type=relax --pwscf-fix-atomic-species="Pd" -f *.cif
+
+
+	cif2cell -p pwscf --pwscf-pseudo-PSLibrary-libdr='/home/student/psl' --pwscf-bin-dir=$HOME/q-e-qe-6.3/bin --setup-all --k-resolution=0.40 --pwscf-run-type=opt --pwscf-fix-all-pos --pwscf-move-atomic-species="Pd" -f *.cif
+
+
 *	Abinit (Phonon)
 
 
@@ -167,6 +179,10 @@ cif2cell-informal
 
 
 ## Version: comments
+
+
+* 1.2.38+PyCifRW-4.4: modified k-point settings for PWscf.
+	could use new verion cif (e.g. new version vesta in 2018-2019)
 
 
 * 1.2.37+PyCifRW-4.4: modified phonon option and k mesh (dos) for Abinit.
