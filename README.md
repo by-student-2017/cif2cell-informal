@@ -208,6 +208,10 @@ cif2cell-informal
 ## Version: comments
 
 
+* 1.2.39+PyCifRW-4.4: add FDMNES option.
+	could use new verion cif (e.g. new version vesta in 2018-2019)
+
+
 * 1.2.38+PyCifRW-4.4: modified k-point settings for PWscf.
 	could use new verion cif (e.g. new version vesta in 2018-2019)
 
