@@ -8,10 +8,10 @@ cif2cell-informal
 ## Compiling
 
 
-*	tar zxvf cif2cell-code-1.2.37+PyCifRW-4.4.tar.gz
+*	tar zxvf cif2cell-code-1.2.39+PyCifRW-4.4.tar.gz
 
 
-*	cd cif2cell-code-1.2.37+PyCifRW-4.4
+*	cd cif2cell-code-1.2.39+PyCifRW-4.4
 
 
 *	sudo python setup.py install
@@ -66,6 +66,12 @@ cif2cell-informal
 
 
 	cif2cell -p lammps --no-reduce -f *.cif
+
+
+*	FDMNES
+
+
+	cif2cell -p fdmnes --no-reduce -f *.cif
 
 
 ## Usage (Expert mode)
@@ -131,6 +137,9 @@ cif2cell-informal
 	cif2cell -p pwscf --pwscf-pseudo-PSLibrary-libdr='/home/student/psl' --pwscf-bin-dir=$HOME/q-e-qe-6.3/bin --setup-all --k-resolution=0.40 --pwscf-run-type=opt --pwscf-fix-all-pos --pwscf-move-atomic-species="Pd" -f *.cif
 
 
+    cif2cell -p pwscf --pwscf-pseudo-PSLibrary-libdr='/home/student/psl' --pwscf-bin-dir=$HOME/q-e-qe-6.3/bin --setup-all --k-resolution=0.40 --pwscf-run-type=opt --pwscf-fix-all-pos --pwscf-move-atomic-species="Pd" --pwscf-space-group -f *.cif
+
+
 *	Abinit (Phonon)
 
 
@@ -141,6 +150,24 @@ cif2cell-informal
 
 
 	cif2cell -p akaikkr --setup-all --akaikkr-brvtyp --akaikkr-collect-atoms --akaikkr-run-level=2 -f *.cif
+
+
+*	FDMNES (TDDFT, Green, Molecular, DOS)
+
+
+	cif2cell -p fdmnes --no-reduce --setup-all --fdmnes-dir=$HOME/fdmnes  --fdmnes-run-type=tddft  --fdmnes-photon-energy  --fdmnes-green --fdmnes-eimag=0.2 --fdmnes-dos  --fdmnes-dft-type=LDA  --fdmnes-molecular --run-calc -f *.cif
+
+
+*	FDMNES (XES, Green, Crystal structure, 1.0 core hole)
+
+
+	cif2cell -p fdmnes --no-reduce --setup-all --fdmnes-dir=$HOME/fdmnes  --fdmnes-run-type=xes  --fdmnes-photon-energy  --fdmnes-core-hole=1.0  --fdmnes-green --fdmnes-eimag=0.2 --run-calc  -f *.cif
+
+
+*	FDMNES (XANES, FDM, Crystal structure, DOS for all atom, 0.5 core hole)
+
+
+	cif2cell -p fdmnes --no-reduce --setup-all --fdmnes-dir=$HOME/fdmnes  --fdmnes-photon-energy  --fdmnes-core-hole=0.5  --fdmnes-dos-all --run-calc  -f *.cif
 
 
 ## Usage (examples, Expert mode)
