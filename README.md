@@ -152,22 +152,52 @@ cif2cell-informal
 	cif2cell -p akaikkr --setup-all --akaikkr-brvtyp --akaikkr-collect-atoms --akaikkr-run-level=2 -f *.cif
 
 
-*	FDMNES (TDDFT, Green, Molecular, DOS)
+*	FDMNES (TDDFT, L23 edge, Photon energy, Green function, Eimag 0.2, LDA, DOS, Molecular)
 
 
-	cif2cell -p fdmnes --no-reduce --setup-all --fdmnes-dir=$HOME/fdmnes  --fdmnes-run-type=tddft  --fdmnes-photon-energy  --fdmnes-green --fdmnes-eimag=0.2 --fdmnes-dos  --fdmnes-dft-type=LDA  --fdmnes-molecular --run-calc -f *.cif
+	cif2cell -p fdmnes --no-reduce --setup-all --fdmnes-dir=$HOME/fdmnes  --fdmnes-run-type=tddft --fdmnes-edge=L23 --fdmnes-photon-energy --fdmnes-green --fdmnes-eimag=0.2 --fdmnes-dos  --fdmnes-dft-type=LDA  --fdmnes-molecular --run-calc -f *.cif
 
 
-*	FDMNES (XES, Green, Crystal structure, 1.0 core hole)
+*	FDMNES (XES, Photon energy, 1.0 core hole, Green function, Eimg 0.2, Crystal structure, auto run)
 
 
-	cif2cell -p fdmnes --no-reduce --setup-all --fdmnes-dir=$HOME/fdmnes  --fdmnes-run-type=xes  --fdmnes-photon-energy  --fdmnes-core-hole=1.0  --fdmnes-green --fdmnes-eimag=0.2 --run-calc  -f *.cif
+	cif2cell -p fdmnes --no-reduce --setup-all --fdmnes-dir=$HOME/fdmnes  --fdmnes-run-type=xes --fdmnes-photon-energy --fdmnes-core-hole=1.0  --fdmnes-green --fdmnes-eimag=0.2 --run-calc  -f *.cif
 
 
-*	FDMNES (XANES, FDM, Crystal structure, DOS for all atom, 0.5 core hole)
+*	FDMNES (XANES, FDM, Crystal structure, 0.5 core hole, DOS for all atom, Crystal structure, auto run)
 
 
-	cif2cell -p fdmnes --no-reduce --setup-all --fdmnes-dir=$HOME/fdmnes  --fdmnes-photon-energy  --fdmnes-core-hole=0.5  --fdmnes-dos-all --run-calc  -f *.cif
+	cif2cell -p fdmnes --no-reduce --setup-all --fdmnes-dir=$HOME/fdmnes  --fdmnes-photon-energy --fdmnes-core-hole=0.5 --fdmnes-dos-all --run-calc  -f *.cif
+
+
+*	FDMNES (Photon energy, 1.0 core hole, Green function, Eimag 0.2, DOS for all atom, LDA,  auto run, DAFS, Crystal structure)
+
+
+	cif2cell -p fdmnes --no-reduce --setup-all --fdmnes-dir=$HOME/fdmnes  --fdmnes-photon-energy --fdmnes-core-hole=1.0 --fdmnes-green --fdmnes-eimag=0.2 --fdmnes-dos-all --fdmnes-dft-type=LDA --run-calc --fdmnes-run-type=dafs -f *.cif
+
+
+*	FDMNES (Photon energy, 1.0 core hole, Green function, Eimag 0.2, DOS for all atom, LDA,  auto run, RXS, Crystal structure)
+
+
+	cif2cell -p fdmnes --no-reduce --setup-all --fdmnes-dir=$HOME/fdmnes  --fdmnes-photon-energy  --fdmnes-core-hole=1.0  --fdmnes-green --fdmnes-eimag=0.2 --fdmnes-dos-all --fdmnes-dft-type=LDA --run-calc --fdmnes-run-type=rxs -f *.cif
+
+
+*	FDMNES (Photon energy, 1.0 core hole, Green function, Eimag 0.2, DOS_comp, LDA,  auto run, Optic, Crystal structure)
+
+
+	cif2cell -p fdmnes --no-reduce --setup-all --fdmnes-dir=$HOME/fdmnes  --fdmnes-photon-energy  --fdmnes-core-hole=1.0  --fdmnes-green --fdmnes-eimag=0.2 --fdmnes-dos-comp --fdmnes-dft-type=LDA --run-calc --fdmnes-run-type=opitc  -f *.cif
+
+
+*	FDMNES (Photon energy, 1.0 core hole, Green function, Eimag 0.2, DOS_comp, LDA,  auto run, Circular, Crystal structure)
+
+
+	cif2cell -p fdmnes --no-reduce --setup-all --fdmnes-dir=$HOME/fdmnes  --fdmnes-photon-energy  --fdmnes-core-hole=1.0  --fdmnes-green --fdmnes-eimag=0.2 --fdmnes-dos-comp --fdmnes-dft-type=LDA --run-calc --fdmnes-run-type=circular  -f *.cif
+
+
+*	FDMNES (Photon energy, 1.0 core hole, Green function, Eimag 0.2, DOS for all atom, LDA,  auto run, Dichroism, Crystal structure)
+
+
+	cif2cell -p fdmnes --no-reduce --setup-all --fdmnes-dir=$HOME/fdmnes  --fdmnes-photon-energy  --fdmnes-core-hole=1.0  --fdmnes-green --fdmnes-eimag=0.2 --fdmnes-dos-all --fdmnes-dft-type=LDA --run-calc  --fdmnes-run-type=dichroism -f *.cif
 
 
 ## Usage (examples, Expert mode)
