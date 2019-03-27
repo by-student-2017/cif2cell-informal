@@ -59,7 +59,7 @@ cif2cell-informal
 *	OpenMX
 
 
-	cif2cell -p openmx --openmx-seudo-libdr=/home/username/openmx3.8/DFT_DATA13/PAO --setup-all -f *.cif
+	cif2cell -p openmx --openmx-pseudo-libdr=/home/username/openmx3.8/DFT_DATA13/PAO --setup-all -f *.cif
 
 
 *	Lammps
