@@ -8,14 +8,13 @@ cif2cell-informal
 ## Compiling
 
 
-1. wget https://raw.githubusercontent.com/by-student-2017/cif2cell-informal/master/cif2cell-core-1.2.44.tar.gz
-2. tar zxvf cif2cell-core-1.2.44.tar.gz
-3. cd cif2cell-1.2.44
-4. tar zxvf PyCifRW-3.3.tar.gz
-5. cd PyCifRW-3.3
-6. sudo python setup.py install
-7. cd ..
-8. sudo python setup.py install
+1. wget https://github.com/by-student-2017/cif2cell-informal.git
+2. cd cif2cell-informal
+3. tar zxvf PyCifRW-3.3.tar.gz
+4. cd PyCifRW-3.3
+5. sudo python setup.py install
+6. cd ..
+7. sudo python setup.py install
 
 
 ## Usage (help)
