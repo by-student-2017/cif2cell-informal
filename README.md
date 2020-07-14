@@ -8,7 +8,7 @@ cif2cell-informal
 ## Compiling
 
 
-1. wget https://github.com/by-student-2017/cif2cell-informal.git
+1. git clone https://github.com/by-student-2017/cif2cell-informal.git
 2. cd cif2cell-informal
 3. tar zxvf PyCifRW-3.3.tar.gz
 4. cd PyCifRW-3.3
