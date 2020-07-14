@@ -1,0 +1,66 @@
+C++ build tools
+https://visualstudio.microsoft.com/ja/downloads/
+Build Tools for Visual Studio 2019 
+check C++ Build Tools 
+Install
+
+cif2cell-1.2.39+PyCifRW-4.4中のsetup.pyの
+PyCifRW-3.3をPyCifRW-4.4に変更
+
+anaconda
+anaconda promtで動作
+
+PyCifRW-4-4はインストール可能
+
+conda create --name=py27 python=2.7
+activate py27
+cifの読み取りでエラーが出る
+2回目からはactivate py27だけでよい。
+PyCifRW-3.3で上手く動作しない場合は、
+PyCifRW-4.4を解凍して、その中に入り
+python setup.py install
+activate py27にして、
+cif2cellのフォルダに戻り、
+python setup.py install
+と入力する。
+
+ファイルのある場所で行う
+activate py27
+python .\build\scripts-2.7\cif2cell -h
+
+python には 2to3 という変換ツールがある。
+anadondaで可能
+2to3 -w -n 
+エラーがたくさん出る。
+
+uctools.pyの1149行の部分で
+sys.stderr.write("***Warning: Space group operation check failed for Hall symbol %s (H-M symbol %s).\n"%(self.HallSymbol,self.HMSymbol))
+においてエラーが発生していることが判明。
+self.HallSymbol,self.HMSymbol がともにUnkownになっている。
+
+        ################################
+        # Get space group information  #
+        ################################
+以降の部分が問題。
+
+Traceback (most recent call last):
+  File "/usr/local/bin/cif2cell", line 524, in <module>
+    cd.getFromCIF(cb)
+  File "/usr/local/lib/python2.7/dist-packages/uctools.py", line 1047, in getFromCIF
+    print cifblock[hallid]
+  File "build/bdist.linux-x86_64/egg/CifFile/StarFile.py", line 434, in __getitem__
+KeyError: u'No such item: _symmetry_space_group_name_Hall'
+
+spgrnrid は動作している。
+
+
+Hallが最初によまれて、H-Mが読まれる。
+VESTAでHallの記号を出力していないからエラー表示がされている。
+
+fix bug:  Line1053
+                self.HMSymbol=cifblock[HMid]
+                self.HMSymbol=cifblock[HMid].translate(string.maketrans("", ""),string.whitespace)
+
+
+http://cci.lbl.gov/sginfo/hall_symbols.html
+
