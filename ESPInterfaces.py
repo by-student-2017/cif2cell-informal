@@ -7086,7 +7086,21 @@ class LAMMPSFile(GeometryOutputFile):
         filestring += "0.0 %f zlo zhi\n" % c
         if xy!=0 or xz !=0 or yz != 0:
             filestring += str(xy) + " " + str(xz) + " " + str(yz) + " xy xz yz\n"
-
+        
+        filestring += "\n"
+        filestring += "Masses\n\n"
+        
+        matomTypes = {}
+        mnextAtomTypeId = 1
+        for a in self.cell.atomdata:
+            for b in a:
+                sp_b = b.spcstring()
+                matomType = str(b).split()[0]
+                if not matomType in matomTypes:
+                    filestring += str(mnextAtomTypeId)+" "+str(ed.elementweight[sp_b])+" # "+str(sp_b)+"\n"
+                    matomTypes[matomType] = mnextAtomTypeId
+                    mnextAtomTypeId += 1
+        
         filestring += "\n"
         filestring += "Atoms\n\n"
 
