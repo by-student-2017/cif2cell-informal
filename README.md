@@ -8,13 +8,14 @@ cif2cell-informal
 ## Compiling
 
 
-1. git clone https://github.com/by-student-2017/cif2cell-informal.git
-2. cd cif2cell-informal
-3. tar zxvf PyCifRW-3.3.tar.gz
-4. cd PyCifRW-3.3
-5. sudo python setup.py install
-6. cd ..
-7. sudo python setup.py install
+1. sudo apt install -y git python python-setuptools python-dev
+2. git clone https://github.com/by-student-2017/cif2cell-informal.git
+3. cd cif2cell-informal
+4. tar zxvf PyCifRW-3.3.tar.gz
+5. cd PyCifRW-3.3
+6. sudo python setup.py install
+7. cd ..
+8. sudo python setup.py install
 
 
 ## Usage (help)
