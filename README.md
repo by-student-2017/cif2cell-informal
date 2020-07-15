@@ -5,7 +5,7 @@ cif2cell-informal
 	Or, expert user recommend to change "_symmetry_" part on cif file. new version cif remove "_symmetry_" and add "alt."
 
 
-## Compiling
+## Install (on ubuntu 18.04 LTS or on Debian 10.0)
 
 
 1. sudo apt install -y git python python-setuptools python-dev
