@@ -21,8 +21,6 @@ cif2cell-informal
 ## Install (on google colaboratory)
 
 
-======
-
 	!apt update
 	!apt install -y git python python-setuptools python-dev
 	%cd /content
