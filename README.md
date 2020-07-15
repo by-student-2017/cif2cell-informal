@@ -18,6 +18,39 @@ cif2cell-informal
 8. sudo python setup.py install
 
 
+## Install (on google colaboratory)
+
+
+!apt update
+
+
+!apt install -y git python python-setuptools python-dev
+
+
+%cd /content
+
+
+!git clone https://github.com/by-student-2017/cif2cell-informal.git
+
+
+%cd cif2cell-informal
+
+
+!tar zxvf PyCifRW-3.3.tar.gz
+
+
+%cd PyCifRW-3.3
+
+
+!python2 setup.py install
+
+
+%cd /content/cif2cell-informal
+
+
+!python2 setup.py install
+
+
 ## Usage (help)
 
 
