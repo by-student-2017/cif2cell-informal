@@ -1993,14 +1993,14 @@ if outputprogram == 'pwscf':
                 prioritylist = pl.split(",")
                 prioritylist.append("")
             except:
-                prioritylist=["-kjpaw","-rrkjus","-dnl","-dn","-spnl","-spfn","-spdn","-spn","-nl","-n",""]
+                prioritylist=["-dnl","-dn","-spnl","-spfn","-spdn","-spn","-nl","-n","-kjpaw","-rrkjus",""]
         if options.pwscfpseudopsllib:
             pwscfinput.pseudolib = options.pwscfpseudopsllib
             pwscfinput.pseudotype = "PSLibrary"
             pwscfinput.pseudostring = ".UPF"
             pwscfinput.dfttype = "pbe"
             if not(options.pwscfpppriority):
-                prioritylist=["-kjpaw","-rrkjus","-dnl","-dn","-spnl","-spfn","-spdn","-spn","-nl","-n",""]
+                prioritylist=["-dnl","-dn","-spnl","-spfn","-spdn","-spn","-nl","-n","-kjpaw","-rrkjus",""]
         if options.pwscfpseudogbrvlib:
             pwscfinput.pseudolib = options.pwscfpseudogbrvlib
             pwscfinput.pseudotype = "GBRV"
