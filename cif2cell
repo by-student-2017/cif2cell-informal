@@ -45,7 +45,7 @@ import multiprocessing
 
 # Name and version
 programname = "cif2cell"
-version = "1.2.44"
+version = "1.2.45"
 
 # Turn of warnings about deprecated stuff
 warnings.simplefilter("ignore",DeprecationWarning)
@@ -1993,14 +1993,14 @@ if outputprogram == 'pwscf':
                 prioritylist = pl.split(",")
                 prioritylist.append("")
             except:
-                prioritylist=["-kjpaw","-rrkjus","-dn","-spnl","-spn","-nl","-n",""]
+                prioritylist=["-kjpaw","-rrkjus","-dnl","-dn","-spnl","-spfn","-spdn","-spn","-nl","-n",""]
         if options.pwscfpseudopsllib:
             pwscfinput.pseudolib = options.pwscfpseudopsllib
             pwscfinput.pseudotype = "PSLibrary"
             pwscfinput.pseudostring = ".UPF"
             pwscfinput.dfttype = "pbe"
             if not(options.pwscfpppriority):
-                prioritylist=["-kjpaw","-rrkjus","-dn","-spnl","-spn","-nl","-n",""]
+                prioritylist=["-kjpaw","-rrkjus","-dnl","-dn","-spnl","-spfn","-spdn","-spn","-nl","-n",""]
         if options.pwscfpseudogbrvlib:
             pwscfinput.pseudolib = options.pwscfpseudogbrvlib
             pwscfinput.pseudotype = "GBRV"
