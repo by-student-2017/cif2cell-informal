@@ -169,7 +169,7 @@ progspec.add_option("--pwscf-alat-units",dest="pwscfalatunits",help="Use 'alat' 
 progspec.add_option("--pwscf-cartesian",dest="pwscfcart",help="Write lattice vectors and positions to PWSCF .in file in cartesian coordinates and set the lengths scale to 1.",action="store_true")
 progspec.add_option("--pwscf-cartesian-latticevectors",dest="pwscfcartvects",help="Write lattice vectors to PWSCF .in file in cartesian coordinates and set the lengths scale to 1.",action="store_true")
 progspec.add_option("--pwscf-cartesian-positions",dest="pwscfcartpos",help="Write lattice positions to PWSCF .in file in cartesian coordinates.",action="store_true")
-progspec.add_option("--pwscf-pseudo-priority",dest="pwscfpppriority",help="Set the priority of different pseudopotentials by a list of suffixes. Also available via the PWscf_PP_PRIORITY environment variable.", metavar='"-kjpaw","-rrkjus","-dn","-spnl","-spn","-nl","-n",""')
+progspec.add_option("--pwscf-pseudo-priority",dest="pwscfpppriority",help="Set the priority of different pseudopotentials by a list of suffixes. Also available via the PWscf_PP_PRIORITY environment variable.", metavar='"-spfn","-spdn","-spnl","-spn","-dnl","-dn","-nl","-n","-kjpaw","-rrkjus",""')
 progspec.add_option("--pwscf-pseudo-GBRV-libdr",dest="pwscfpseudogbrvlib",help="Path to the PWscf pseudopotential library. Also settable by the PWscf_PAWLIB environment variable.",metavar="None")
 progspec.add_option("--pwscf-pseudo-PSLibrary-libdr",dest="pwscfpseudopsllib",help="Path to the PWscf pseudopotential library. Also settable by the PWscf_PAWLIB environment variable. if set nothing, read PWscf_PAWLIB or PWscf_PSEUDOLIB.",metavar="None")
 progspec.add_option("--pwscf-pseudo-PSLibrary-full-relativistic",dest="pwscfpslrel",help="yes: Set the full relativistic pseudopotential in PSLibrary. (default no)",metavar="no")
@@ -1993,14 +1993,14 @@ if outputprogram == 'pwscf':
                 prioritylist = pl.split(",")
                 prioritylist.append("")
             except:
-                prioritylist=["-dnl","-dn","-spnl","-spfn","-spdn","-spn","-nl","-n","-kjpaw","-rrkjus",""]
+                prioritylist=["-spfn","-spdn","-spnl","-spn","-dnl","-dn","-nl","-n","-kjpaw","-rrkjus",""]
         if options.pwscfpseudopsllib:
             pwscfinput.pseudolib = options.pwscfpseudopsllib
             pwscfinput.pseudotype = "PSLibrary"
             pwscfinput.pseudostring = ".UPF"
             pwscfinput.dfttype = "pbe"
             if not(options.pwscfpppriority):
-                prioritylist=["-dnl","-dn","-spnl","-spfn","-spdn","-spn","-nl","-n","-kjpaw","-rrkjus",""]
+                prioritylist=["-spfn","-spdn","-spnl","-spn","-dnl","-dn","-nl","-n","-kjpaw","-rrkjus",""]
         if options.pwscfpseudogbrvlib:
             pwscfinput.pseudolib = options.pwscfpseudogbrvlib
             pwscfinput.pseudotype = "GBRV"
