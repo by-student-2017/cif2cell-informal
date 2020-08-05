@@ -8,7 +8,7 @@ cif2cell-informal
 ## Install (on ubuntu 18.04 LTS or on Debian 10.0)
 
 
-1. sudo apt install -y git python python-setuptools python-dev
+1. sudo apt install -y git python python-setuptools python-dev gcc
 2. git clone https://github.com/by-student-2017/cif2cell-informal.git
 3. cd cif2cell-informal
 4. tar zxvf PyCifRW-3.3.tar.gz
@@ -22,7 +22,7 @@ cif2cell-informal
 
 
 	!apt update
-	!apt install -y git python python-setuptools python-dev
+	!apt install -y git python python-setuptools python-dev gcc
 	%cd /content
 	!git clone https://github.com/by-student-2017/cif2cell-informal.git
 	%cd cif2cell-informal
