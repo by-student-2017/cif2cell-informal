@@ -2718,6 +2718,7 @@ class PWSCF_Input_File(GeometryOutputFile):
                 else:
                     times = 1
                 #
+                kshift_list = []
                 if self.kpeven == "yes":
                     if self.cell.crystal_system() == "hexagonal":
                         kshift_list = [2]
