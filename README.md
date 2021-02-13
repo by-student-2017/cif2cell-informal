@@ -98,7 +98,7 @@ $PREFIX/lib/cif2cell/docs directory.
 
 Run 'cif2cell -h' to get a listing of the different options.
 Example:
-cif2cell Ni20Mn3P6.cif -p vasp --vasp-cartesian-positions
+	cif2cell Ni20Mn3P6.cif -p vasp --vasp-cartesian-positions
 will generate a POSCAR file for VASP with the positions in cartesian format.
 
 
