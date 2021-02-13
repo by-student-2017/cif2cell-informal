@@ -9,7 +9,7 @@ Copyright 2010, Torbjorn Bjorkman
 ## Python 2.7 (no python 3.x support)
 
 * Tested for Python 2.7.
-* Latest version is developed on [another repo](https://github.com/torbjornbjorkman/cif2cell).
+* Latest python 3.x version is developed on [another repo](https://github.com/torbjornbjorkman/cif2cell).
 * Let's cite [Computer Physics Communications, Volume 182, Issue 5, p. 1183-1186.](https://www.sciencedirect.com/science/article/pii/S0010465511000336).
 
 ## LAMMPS Support
