@@ -1,6 +1,6 @@
 Copyright 2010, Torbjorn Bjorkman
 
-## cif2cell-informal
+## Attention in cif2cell-informal
 
 * cif2cell support cif file (from VESTA version 3.1.0 - 3.1.7 in 2013-2014.)
 * You can get VESTA old version from this URL: http://jp-minerals.org/vesta/archives/)
