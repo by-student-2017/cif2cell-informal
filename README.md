@@ -1,11 +1,14 @@
 Copyright 2010, Torbjorn Bjorkman
 
-
 ## cif2cell-informal
-
+	cif2cell support cif file (from VESTA version 3.1.0 - 3.1.7 in 2013-2014. you can get VESTA old version from this URL: http://jp-minerals.org/vesta/archives/)
+	Or, expert user recommend to change "_symmetry_" part on cif file. new version cif remove "_symmetry_" and add "alt."
 
 ## Python 2.7 (no python 3.x support)
 
+* Also tested for Python 2.7.
+* ~Keep in your mind that the original version began to support Python 3.~ Latest version is developed on [another repo](https://github.com/torbjornbjorkman/cif2cell).
+* Let's cite [Computer Physics Communications, Volume 182, Issue 5, p. 1183-1186.](https://www.sciencedirect.com/science/article/pii/S0010465511000336).
 
 ## LAMMPS Support
 I have added support for LAMMPS .data files with orthogonal and triclinic boxes. To convert a CIF-file to LAMMPS data file, simply run (in this directory)
