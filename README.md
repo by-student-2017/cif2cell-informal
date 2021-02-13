@@ -1,5 +1,9 @@
 Copyright 2010, Torbjorn Bjorkman
 
+
+## Python2.7
+
+
 ## LAMMPS Support
 I have added support for LAMMPS .data files with orthogonal and triclinic boxes. To convert a CIF-file to LAMMPS data file, simply run (in this directory)
 ```
@@ -112,6 +116,11 @@ COMP, Aaalto University School ofScience and Technology,
 Department of Applied Physics, 
 Espoo, Finland
 torbjorn@cc.hut.fi
+
+
+## References
+	[1] https://github.com/andeplane/cif2cell-lammps
+	[2] https://github.com/kmu/cif2cell
 
 
 cif2cell-informal
