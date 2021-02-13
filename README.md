@@ -19,7 +19,7 @@ the primitive cell or the conventional cell.
 
 ## CURRENTLY SUPPORTS
 
-| code             | alloy support | output files |
+| code             | alloy support | output files (--setup-all) |
 | -----------------|:-------------:|--------------|
 | ASE              |  no           | positions.py |
 | ATAT             |  no           | [compoundname].in |
@@ -29,21 +29,21 @@ the primitive cell or the conventional cell.
 | Crystal09        |  no           | [compoundname].d12 |
 | VASP             | VCA           | POSCAR (INCAR, POTCAR and KPOINTS) |
 | ABINIT           |  no           | [compoundname].in ([compoundname].files) |
-| quantum espresso |  no           | [compoundname].in |
+| quantum espresso |  no           | [compoundname].in ([compoundname].in) |
 | Siesta           |  no           | [compoundname].fdf |
-| OpenMX           |  no           | [compoundname].dat |
+| OpenMX           |  no           | [compoundname].dat ([compoundname].dat)|
 | FDMNES           |  no           | [compoundname].txt (fdmfile.txt) |
 | FHI-aims         |  no           | geometry.in |
 | RSPt             |  no           | symt.inp |
 | Fleur            |  no           | inp_[compoundname] |
-| elk              |  no           | GEOMETRY.OUT |
+| elk              |  no           | GEOMETRY.OUT (GEOMETRY.OUT)|
 | exciting         |  no           | input.xml |
 | hutsepot         |  no           | [compoundname].sys |
 | cellgen          |  no           | cellgen.inp |
 | spacegroup       |  no           | spacegroup.in |
 | ncol             |  no           | [spacegroupname/compoundname].dat  for bstr. |
 | emto             |  yes          | [spacegroupname/compoundname].dat for kstr, bmdl, shape, kgrn and kfcd in separate directories. |
-| Akai-KKR         |  yes          | [compoundname].in |
+| Akai-KKR         |  yes          | [compoundname].in ([compoundname].in) |
 | SPR-KKR          |  yes          | [compoundname].sys |
 | MOPAC            |  no           | [compoundname].mop |
 | DFTB+            |  no           | [compoundname].gen |
