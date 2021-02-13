@@ -22,26 +22,36 @@ the primitive cell or the conventional cell.
 | code             | alloy support | output files |
 | -----------------|:-------------:|--------------|
 | ASE              |  no           | positions.py |
-| VASP             | VCA           | POSCAR |
-| ABINIT           |  no           | [compoundname].in |
-| Siesta           |  no           | [compoundname].fdf |
+| ATAT             |  no           | [compoundname].in |
 | CPMD             |  no           | [compoundname].inp |
+| CP2k             |  no           | [compoundname].inp |
 | CASTEP           | VCA           | [compoundname].cell |
 | Crystal09        |  no           | [compoundname].d12 |
-| DFTB+            |  no           | [compoundname].gen |
+| VASP             | VCA           | POSCAR (INCAR, POTCAR and KPOINTS) |
+| ABINIT           |  no           | [compoundname].in ([compoundname].files) |
 | quantum espresso |  no           | [compoundname].in |
+| Siesta           |  no           | [compoundname].fdf |
+| OpenMX           |  no           | [compoundname].dat |
+| FDMNES           |  no           | [compoundname].txt (fdmfile.txt) |
 | FHI-aims         |  no           | geometry.in |
 | RSPt             |  no           | symt.inp |
 | Fleur            |  no           | inp_[compoundname] |
-| hutsepot         |  no           | [compoundname].sys |
-| cellgen          |  no           | cellgen.inp |
 | elk              |  no           | GEOMETRY.OUT |
 | exciting         |  no           | input.xml |
+| hutsepot         |  no           | [compoundname].sys |
+| cellgen          |  no           | cellgen.inp |
 | spacegroup       |  no           | spacegroup.in |
 | ncol             |  no           | [spacegroupname/compoundname].dat  for bstr. |
 | emto             |  yes          | [spacegroupname/compoundname].dat for kstr, bmdl, shape, kgrn and kfcd in separate directories. |
-| spr-kkr          |  yes          | [compoundname].sys |
+| Akai-KKR         |  yes          | [compoundname].in |
+| SPR-KKR          |  yes          | [compoundname].sys |
+| MOPAC            |  no           | [compoundname].mop |
+| DFTB+            |  no           | [compoundname].gen |
+| Lammps           |  no           | [compoundname].data |
 | xyz              |  no           | [compoundname].xyz |
+| cfg              |  no           | [compoundname].cfg |
+| coo              |  no           | [compoundname].coo |
+| spc              |  no           | [compoundname].dat |
 
 ## CONTENTS
 The distribution includes:
