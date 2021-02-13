@@ -43,8 +43,8 @@ the primitive cell or the conventional cell.
 | spacegroup       |  no           | spacegroup.in |
 | ncol             |  no           | [spacegroupname/compoundname].dat  for bstr. |
 | emto             |  yes          | [spacegroupname/compoundname].dat for kstr, bmdl, shape, kgrn and kfcd in separate directories. |
-| Akai-KKR         |  yes          | [compoundname].in ([compoundname].in) |
-| SPR-KKR          |  yes          | [compoundname].sys |
+| Akai-KKR         |  CPA          | [compoundname].in ([compoundname].in) |
+| SPR-KKR          |  CPA          | [compoundname].sys |
 | MOPAC            |  no           | [compoundname].mop |
 | DFTB+            |  no           | [compoundname].gen |
 | Lammps           |  no           | [compoundname].data |
