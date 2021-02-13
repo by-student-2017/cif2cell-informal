@@ -74,18 +74,26 @@ The distribution includes:
 ## INSTALLATION INSTRUCTIONS
 
 Prerequisites: The program requires Python 2.4 or higher and the
-               PyCIFRW python package (which will be installed 
-               automatically if not present, see below for manual 
+               PyCIFRW python package (which will be installed
+               automatically if not present, see below for manual
    	       installation instructions). Note however that the output
-               may be slightly different (but formally equivalent) 
+               may be slightly different (but formally equivalent)
 	       with Python 2.4 than with later versions.
 
 To install the program in your systems standard location, simply type:
-python setup.py install 
-To choose a different location, add 
---prefix=where/you/want/it 
+
+```
+(sudo) python setup.py install
+```
+
+To choose a different location, add
+--prefix=where/you/want/it
 to the above line. For help and more options type
+
+```
 python setup.py --help
+
+```
 
 The installation will also create a directory $PREFIX/lib/cif2cell
 that contains the manual and sample cif files.
