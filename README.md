@@ -29,7 +29,7 @@ the primitive cell or the conventional cell.
 | Crystal09        |  no           | [compoundname].d12 |
 | VASP             | VCA           | POSCAR (INCAR, POTCAR and KPOINTS) |
 | ABINIT           |  no           | [compoundname].in ([compoundname].files) |
-| quantum espresso |  no           | [compoundname].in ([compoundname].in) |
+| quantum espresso (PWscf) |  no           | [compoundname].in ([compoundname].in) |
 | Siesta           |  no           | [compoundname].fdf |
 | OpenMX           |  no           | [compoundname].dat ([compoundname].dat)|
 | FDMNES           |  no           | [compoundname].txt (fdmfile.txt) |
