@@ -36,7 +36,7 @@ the primitive cell or the conventional cell.
 | FHI-aims         |  no           | geometry.in |
 | RSPt             |  no           | symt.inp |
 | Fleur            |  no           | inp_[compoundname] |
-| elk              |  no           | GEOMETRY.OUT (GEOMETRY.OUT)|
+| elk              |  no           | GEOMETRY.OUT ([compoundname].in) |
 | exciting         |  no           | input.xml |
 | hutsepot         |  no           | [compoundname].sys |
 | cellgen          |  no           | cellgen.inp |
