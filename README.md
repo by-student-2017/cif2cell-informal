@@ -29,7 +29,7 @@ the primitive cell or the conventional cell.
 | Crystal09        |  no           | [compoundname].d12 |
 | VASP             | VCA           | POSCAR (INCAR, POTCAR and KPOINTS) |
 | ABINIT           |  no           | [compoundname].in ([compoundname].files) |
-| quantum espresso (PWscf) |  no           | [compoundname].in ([compoundname].in) |
+| quantum espresso |  no           | [compoundname].in ([compoundname].in) |
 | Siesta           |  no           | [compoundname].fdf |
 | OpenMX           |  no           | [compoundname].dat ([compoundname].dat)|
 | FDMNES           |  no           | [compoundname].txt (fdmfile.txt) |
@@ -197,7 +197,7 @@ cif2cell-informal
 	cif2cell -p elk --setup-all -f *.cif
 
 
-*	Akai-KKR
+*	Akai-KKR ("cpa2002v009c.tar.gz" around 2015)
 
 
 	cif2cell -p akaikkr --setup-all -f *.cif
@@ -300,7 +300,7 @@ cif2cell-informal
 	cif2cell -p abinit --abinit-pseudo-JTH-libdr='/home/student/jth' --setup-all --abinit-run-type=phonon --k-resolution=0.4 --abinit-q-resolution=0.8 -f *.cif
 
 
-*	Akai-KKR (brvtyp mode)
+*	Akai-KKR (brvtyp mode) ("cpa2002v009c.tar.gz" around 2015)
 
 
 	cif2cell -p akaikkr --setup-all --akaikkr-brvtyp --akaikkr-collect-atoms --akaikkr-run-level=2 -f *.cif
