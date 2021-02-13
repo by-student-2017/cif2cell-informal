@@ -149,7 +149,7 @@ torbjorn@cc.hut.fi
 	[3] https://github.com/kmu/cif2cell
 
 
-cif2cell-informal
+Details of cif2cell-informal
 ======
 
 	cif2cell support cif file (from VESTA version 3.1.0 - 3.1.7 in 2013-2014. you can get VESTA old version from this URL: http://jp-minerals.org/vesta/archives/)
