@@ -1,7 +1,10 @@
 Copyright 2010, Torbjorn Bjorkman
 
 
-## Python2.7
+## cif2cell-informal
+
+
+## Python 2.7 (no python 3.x support)
 
 
 ## LAMMPS Support
@@ -133,8 +136,9 @@ torbjorn@cc.hut.fi
 
 
 ## References
-	[1] https://github.com/andeplane/cif2cell-lammps
-	[2] https://github.com/kmu/cif2cell
+	[1] https://github.com/torbjornbjorkman/cif2cell
+	[2] https://github.com/andeplane/cif2cell-lammps
+	[3] https://github.com/kmu/cif2cell
 
 
 cif2cell-informal
