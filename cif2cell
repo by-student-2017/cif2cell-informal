@@ -46,7 +46,7 @@ import multiprocessing
 
 # Name and version
 programname = "cif2cell"
-version = "1.2.46"
+version = "1.2.47"
 
 # Turn of warnings about deprecated stuff
 warnings.simplefilter("ignore",DeprecationWarning)
@@ -248,7 +248,7 @@ progspec.add_option("--openmx-dft-type",dest="openmxdfttype",help="DFT type, e.g
 progspec.add_option("--openmx-bin-dir",dest="openmx_bin_dir",help="bin adress for OpenMX code (default: $HOME/openmx*/work)", metavar="$HOME/openmx*/work")
 progspec.add_option("--openmx-dft+u",dest="openmx_dft_u",help="DFT+U calculation (defaults no).",action="store_true")
 progspec.add_option("--openmx-dftu-times",dest="openmx_dftu_times",help="DFT+U calculation. This option set Ueff*times or (U-J)*times. (defaults  0.25).",metavar=0.25)
-#FDMNES
+# FDMNES
 progspec.add_option("--fdmnes-dir",dest="fdmnes_dir",help="execute file adress for fdmnes code (default: $HOME/fdmnes)", metavar="$HOME/fdmnes")
 progspec.add_option("--fdmnes-run-type",dest="run_type",help="output template (input file) for every run type (tasks). e.g. scf, dos, dos-all, green, tddft, xanes, xes, fit, optic, circular, dichroism, nrixs, dafs, rxs, xafs, fdmx. (xafs=fdmx) (default: xanes)", metavar="xanes")
 progspec.add_option("--fdmnes-dft-type",dest="fdmnes_dft_type",help="DFT type, e.g. LDA, GGA, Xa, etc. (default GGA)",metavar="GGA")
@@ -268,6 +268,8 @@ progspec.add_option("--fdmnes-molecular",dest="fdmnes_molecular",help="set moecl
 progspec.add_option("--fdmnes-eimag",dest="fdmnes_eimag",help="Eimag for Green function. (defaults no).",metavar=0)
 progspec.add_option("--fdmnes-spherical",dest="fdmnes_spherical",help="show the spherical tensors (in number of electron).",action="store_true")
 progspec.add_option("--fdmnes-edge",dest="fdmnes_edge",help="K, L1, L2, L3, L23, M1, M23, M45, N23, N45, etc. (defaults K).",metavar="K")
+# LAMMPS
+progspec.add_option("--lammps-type",dest="lammps_type",help="output format (atomic or charge). atomic: [Stillinger-Weber (SW), Tersoff, FS, EAM, MEAM, ADP, REBO, AIREBO, COMB, COMB3, BOP, EIM, adiabatic core/shell model , Streitz-Mintmire and vashishta]. charge: [OPLS, Amber, CHARMM (charmm22), dreiding and ReaxFF (reax for Fortran, reax/c for C language. Usually use reax/c)]",metavar="atomic")
 #
 parser.add_option_group(generalopts)
 parser.add_option_group(cellgenopts)
@@ -2794,6 +2796,11 @@ if outputprogram == 'lammps':
     docstring += " :  "+ref.referencestring()+"."
     # Initialize the LAMMPSFile structure
     sysfile = LAMMPSFile(cd, docstring)
+    # output format
+    if options.lammps_type:
+        sysfile.lammps_type=options.lammps_type
+    else:
+        sysfile.lammps_type="atomic"
     f = open(outputfile, outmode)
     f.write(str(sysfile))
     f.close()

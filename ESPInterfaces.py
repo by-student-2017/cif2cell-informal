@@ -7163,7 +7163,10 @@ class LAMMPSFile(GeometryOutputFile):
                 t = Vector(mvmult3(lv,b.position))
                 atomType = str(b).split()[0]
                 atomTypeId = atomTypes[atomType]
-                filestring += str(nextAtomId)+" "+str(atomTypeId)+" "+str(t)+"\n"
+                if self.lammps_type == "charge":
+                    filestring += str(nextAtomId)+" "+str(atomTypeId)+" 0.0 "+str(t)+"\n"
+                else:
+                    filestring += str(nextAtomId)+" "+str(atomTypeId)+" "+str(t)+"\n"
                 nextAtomId += 1
         return filestring
 
