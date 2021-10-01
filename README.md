@@ -162,14 +162,27 @@ Details of cif2cell-informal
 
 
 ## Install (on ubuntu 18.04 LTS or on Debian 10.0)
-1. sudo apt install -y git python python-setuptools python-dev gcc
-2. git clone https://github.com/by-student-2017/cif2cell-informal.git
-3. cd cif2cell-informal
-4. tar zxvf PyCifRW-3.3.tar.gz
-5. cd PyCifRW-3.3
-6. sudo python setup.py install
-7. cd ..
-8. sudo python setup.py install
+1. sudo apt update
+2. sudo apt install -y git python python-setuptools python-dev gcc
+3. git clone https://github.com/by-student-2017/cif2cell-informal.git
+4. cd cif2cell-informal
+5. tar zxvf PyCifRW-3.3.tar.gz
+6. cd PyCifRW-3.3
+7. sudo python setup.py install
+8. cd ..
+9. sudo python setup.py install
+
+
+## Install (on ubuntu 20.04 LTS)
+1. sudo apt update
+2. sudo apt -y install python2 python-setuptools python2-dev
+3. git clone https://github.com/by-student-2017/cif2cell-informal.git
+4. cd cif2cell-informal
+5. tar zxvf PyCifRW-3.3.tar.gz
+6. cd PyCifRW-3.3
+7. sudo python2 setup.py install
+8. cd ..
+9. sudo python2 setup.py install
 
 
 ## Install (on google colaboratory)
